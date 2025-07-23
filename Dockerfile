@@ -14,7 +14,7 @@ RUN pip install poetry
 RUN git clone https://github.com/logspace-ai/langflow.git /app
 
 # Install Python dependencies
-RUN poetry config virtualenvs.create false && poetry install --no-dev
+RUN poetry config virtualenvs.create false && poetry install --without dev
 
 # Set environment variables
 ENV PORT=7860
